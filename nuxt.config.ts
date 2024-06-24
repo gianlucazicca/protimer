@@ -7,4 +7,8 @@ export default defineNuxtConfig({
     cssPath: '~~/src/assets/css/main.css',
     configPath: '~~/config/tailwindcss.config.ts',
   },
+  
+  runtimeConfig: {
+      databaseUrl: ''
+  }
 })
