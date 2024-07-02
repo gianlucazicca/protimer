@@ -9,13 +9,18 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "docker:up": "docker compose -f dev-ops/protimer_db/docker-compose.yml up -d",
-    "docker:down": "docker compose -f dev-ops/protimer_db/docker-compose.yml down"
+    "docker:down": "docker compose -f dev-ops/protimer_db/docker-compose.yml down",
+    "prisma:generate": "npx prisma generate",
+    "prisma:migrate": "npx prisma migrate dev",
+    "prisma:pull": "npx prisma db pull",
+    "prisma:push": "npx prisma db push"
   },
   "prisma": {
     "schema": "./src/server/db/prisma/schema.prisma"
   },
   "dependencies": {
-    "@prisma/client": "5.15.1",
+    "@prisma/client": "^5.16.1",
+    "argon2": "^0.40.3",
     "jsonwebtoken": "^9.0.2",
     "nuxt": "^3.12.1",
     "postgres": "^3.4.4",
@@ -27,7 +32,7 @@
   "devDependencies": {
     "@nuxt/ui": "^2.17.0",
     "@nuxtjs/tailwindcss": "^6.12.0",
-    "prisma": "^5.15.1",
+    "prisma": "^5.16.1",
     "tailwindcss": "^3.4.4"
   }
 }
